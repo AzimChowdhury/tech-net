@@ -4,6 +4,7 @@ import MainLayout from './layouts/MainLayout';
 function App() {
   return (
     <div>
+      {/* toaster */}
       <Toaster />
       <MainLayout />
     </div>
