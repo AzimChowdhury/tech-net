@@ -60,7 +60,7 @@ export function SignupForm({ className, ...props }: UserAuthFormProps) {
             />
             {errors.password && <p>{errors.password.message}</p>}
             <Input
-              id="password"
+              id="confirmPassword"
               placeholder="confirm password"
               type="password"
               autoCapitalize="none"
