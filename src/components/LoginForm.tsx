@@ -11,6 +11,7 @@ import { FcGoogle } from 'react-icons/fc';
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import { loginUser } from '@/redux/features/user/userSlice';
 
 type UserAuthFormProps = React.HTMLAttributes<HTMLDivElement>;
 
@@ -32,9 +33,8 @@ export function LoginForm({ className, ...props }: UserAuthFormProps) {
   const navigate = useNavigate();
 
   const onSubmit = (data: LoginFormInputs) => {
-    console.log(data);
 
-    // dispatch(loginUser({ email: data.email, password: data.password }));
+    dispatch(loginUser({ email: data.email, password: data.password }));
   };
 
   useEffect(() => {
